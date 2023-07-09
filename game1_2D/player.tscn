@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://b61lnl0uvhop"]
+[gd_scene load_steps=5 format=3 uid="uid://b61lnl0uvhop"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_olmpa"]
+[ext_resource type="Texture2D" uid="uid://pcmlj6qt40dk" path="res://character/man_idle1.png" id="2_0pc0n"]
+[ext_resource type="Texture2D" uid="uid://bl17yxn3wo3mb" path="res://character/man_idle2.png" id="3_en8mv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r012t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0pc0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_en8mv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_olmpa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(243, 428)
+scale = Vector2(5.67471, 5.67471)
+sprite_frames = SubResource("SpriteFrames_r012t")
+animation = &"idle"
+frame_progress = 0.463056

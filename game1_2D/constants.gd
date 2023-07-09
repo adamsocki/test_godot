@@ -8,5 +8,16 @@ enum GameState
 	MainMenu,
 	Playing,
 	Paused,
-	GameOver
+	GameOver,
+	
+	InGame,
+	LevelPlay
+}
+
+
+
+enum TransitionType
+{
+	from_start,
+	from_level
 }

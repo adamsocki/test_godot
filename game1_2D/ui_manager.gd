@@ -6,11 +6,17 @@ var start_game_button
 var game_title
 
 
-var transitioning_type_1
+
+var transition_state
+
+
+
 var fade_in
 var transition_screen_type_1
 
-func init_start_menu():
+var level_manager
+
+func init_all_levels():
 	quit_game_button = $HBoxContainer/QuitGameButton
 	start_game_button = $HBoxContainer/StartGameButton
 	game_title = $Title
@@ -20,34 +26,59 @@ func init_start_menu():
 	start_game_button.text = "Start"
 	$HBoxContainer.set("theme_override_constants/separation", 100)
 	
+	level_manager = get_node("../LevelManager")
+	
 #	start_game_button.pressed.connect(on_button_pressed)
-	transitioning_type_1 = false
+	
 	fade_in = false
 	transition_screen_type_1 = $TransitionScreen
 	transition_screen_type_1.hide()
 
 
-func on_button_pressed():
-#	start_game_button.text = "FORORORO"
-	transitioning_type_1 = true
+func on_start_button_pressed():
+	start_game_button.text = "FORORORO"
+	transition_state = Constants.TransitionType.from_start
+	fade_in = true
 	transition_screen_type_1.show()
 	
 
 
+func transition_ui_fade(delta):
+	match transition_state:
+		Constants.TransitionType.from_start:
+			var new_alpha = transition_screen_type_1.color.a
+			if fade_in:
+				new_alpha += delta * 0.8  # Decrease alpha for fade in
+			else:
+				new_alpha -= delta * 0.8 # Increase alpha for fade out
+			new_alpha = clamp(new_alpha, 0, 1)
+			transition_screen_type_1.color = Color(0, 0, 0, new_alpha)
+		
+			if (fade_in):
+				if (new_alpha >= 1):
+					return true
+			else:
+				if (new_alpha <= 0):
+					return true
+				
+		Constants.TransitionType.from_level:
+			pass
+
 
 func update_ui_start(delta):
-	if transitioning_type_1:
-		var new_alpha = transition_screen_type_1.color.a
-		if fade_in:
-			new_alpha -= delta * 0.1  # Decrease alpha for fade in
-		else:
-			new_alpha += delta * 0.1 # Increase alpha for fade out
-		new_alpha = clamp(new_alpha, 0, 1)
-		transition_screen_type_1.color = Color(0, 0, 0, new_alpha)
+	
+	if transition_state == Constants.TransitionType.from_start:
+		var transition_complete = transition_ui_fade(delta)
 
-
+		if transition_complete:
+#			get_parent().game_state = Constants.GameState.Playing
+			level_manager.next_level()
+			transition_ui_fade(delta)
 	
 
+
+func update_ui_level(delta):
+	pass
 
 func show_start_menu():
 	pass

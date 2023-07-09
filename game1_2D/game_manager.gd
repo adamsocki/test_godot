@@ -8,6 +8,7 @@ var game_state
 func _ready():
 	game_state = Constants.GameState.StartGame
 	$GameStateManager.init_game()
+	$LevelManager.init_level_manager()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
