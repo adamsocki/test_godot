@@ -21,3 +21,8 @@ enum TransitionType
 	from_start,
 	from_level
 }
+
+enum MenuType
+{
+	settings_menu
+}

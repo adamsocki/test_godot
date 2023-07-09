@@ -3,12 +3,8 @@ extends Node
 var transitioning
 
 func init_game():
-	get_node("../UIManager").init_start_menu()
-
-
-
-
-
+	pass
+#	get_node("../UIManager").init_start_menu()
 
 
 

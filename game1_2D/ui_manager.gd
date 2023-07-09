@@ -11,6 +11,9 @@ var transition_state
 
 
 
+var menus
+
+
 var fade_in
 var transition_screen_type_1
 
@@ -33,7 +36,10 @@ func init_all_levels():
 	fade_in = false
 	transition_screen_type_1 = $TransitionScreen
 	transition_screen_type_1.hide()
-
+	
+	menus = [
+		preload("res://menus/game_settings.tscn")  # Constants.MenuType.settings_menu [0]
+	]
 
 func on_start_button_pressed():
 	start_game_button.text = "FORORORO"
