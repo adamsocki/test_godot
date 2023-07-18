@@ -307,3 +307,21 @@ offset_left = 800.0
 offset_top = 520.0
 offset_right = 1408.0
 offset_bottom = 552.0
+
+[node name="Paralax_set_2" type="Node2D" parent="."]
+position = Vector2(-3776, -5048)
+scale = Vector2(14.6804, 117.624)
+
+[node name="ColorRect" type="ColorRect" parent="Paralax_set_2"]
+offset_left = 307.348
+offset_top = 37.6793
+offset_right = 347.348
+offset_bottom = 77.6793
+scale = Vector2(0.544846, 0.105248)
+
+[node name="ColorRect2" type="ColorRect" parent="Paralax_set_2"]
+offset_left = 345.493
+offset_top = 37.5433
+offset_right = 385.493
+offset_bottom = 77.5433
+scale = Vector2(0.122516, 0.105662)
