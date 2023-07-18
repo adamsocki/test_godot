@@ -46,6 +46,7 @@ func on_start_button_pressed():
 	transition_state = Constants.TransitionType.from_start
 	fade_in = true
 	transition_screen_type_1.show()
+	get_parent().get_parent().game_state = Constants.GameState.InGame
 	
 
 
@@ -81,6 +82,13 @@ func update_ui_start(delta):
 			level_manager.next_level()
 			transition_ui_fade(delta)
 	
+
+
+func update_ui_manager():
+	set_cursor_position()
+
+func set_cursor_position():
+	$Cursor.position = get_viewport().get_mouse_position()
 
 
 func update_ui_level(delta):

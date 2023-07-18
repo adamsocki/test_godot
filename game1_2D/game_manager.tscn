@@ -14,3 +14,5 @@ script = ExtResource("1_g3r8g")
 
 [node name="LevelManager" type="Node" parent="."]
 script = ExtResource("4_qhfwk")
+
+[node name="PlayerManager" type="Node" parent="."]

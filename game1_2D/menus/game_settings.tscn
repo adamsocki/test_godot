@@ -18,6 +18,7 @@ grow_vertical = 2
 color = Color(0.541176, 0.470588, 0.580392, 1)
 
 [node name="ReturnButton" type="Button" parent="ColorRect"]
+layout_mode = 0
 offset_left = 72.0
 offset_top = 408.0
 offset_right = 244.0
@@ -26,6 +27,7 @@ text = "Return to Start Menu
 "
 
 [node name="SaveSettings" type="Button" parent="ColorRect"]
+layout_mode = 0
 offset_left = 536.0
 offset_top = 408.0
 offset_right = 708.0

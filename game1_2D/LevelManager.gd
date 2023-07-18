@@ -21,6 +21,11 @@ func init_level_manager():
 	start_level(current_level_index)
 	
 
+func update_currentlevel():
+	current_level.update_level()
+
+
+
 func start_level(level_index):
 
 	if current_level != null:
@@ -28,10 +33,11 @@ func start_level(level_index):
 		
 	# Load the new level
 	current_level = levels[level_index].instantiate()
-
+	
 	# Add the new level as a child of this node
 	add_child(current_level)
 
+	current_level.init_level()
 	# Store the new level index
 	current_level_index = level_index
 

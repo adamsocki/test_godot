@@ -26,3 +26,9 @@ enum MenuType
 {
 	settings_menu
 }
+
+enum PlayerState
+{
+	idle,
+	walking
+}

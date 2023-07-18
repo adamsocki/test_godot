@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd1x5rds8v7ws"]
+[gd_scene load_steps=4 format=3 uid="uid://dd1x5rds8v7ws"]
 
 [ext_resource type="PackedScene" uid="uid://b61lnl0uvhop" path="res://player.tscn" id="1_g8vml"]
+[ext_resource type="Script" path="res://levels/level_1.gd" id="1_o4g7v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffcsp"]
 radius = 8.0
 height = 896.0
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_o4g7v")
 
 [node name="Node" type="Node" parent="."]
 
@@ -33,3 +35,275 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ffcsp")
 
 [node name="Player" parent="." instance=ExtResource("1_g8vml")]
+position = Vector2(192, 440)
+
+[node name="Paralax_set_1" type="Node2D" parent="."]
+scale = Vector2(4.03347, 7.44032)
+
+[node name="ColorRect" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 53.0189
+offset_right = 53.0189
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 69.4191
+offset_right = 79.4191
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 85.2863
+offset_right = 95.2863
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 101.686
+offset_right = 111.686
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 119.004
+offset_right = 129.004
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 135.404
+offset_right = 145.404
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 151.271
+offset_right = 161.271
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 167.672
+offset_right = 177.672
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 184.456
+offset_right = 194.456
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 200.857
+offset_right = 210.857
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 216.724
+offset_right = 226.724
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 233.124
+offset_right = 243.124
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 250.442
+offset_right = 260.442
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 266.842
+offset_right = 276.842
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 282.709
+offset_right = 292.709
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 299.109
+offset_right = 309.109
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 315.361
+offset_right = 325.361
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 331.761
+offset_right = 341.761
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 347.628
+offset_right = 357.628
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 364.028
+offset_right = 374.028
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 381.346
+offset_right = 391.346
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 397.746
+offset_right = 407.746
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 413.613
+offset_right = 423.613
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 430.014
+offset_right = 440.014
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 446.798
+offset_right = 456.798
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect26" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 463.199
+offset_right = 473.199
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect27" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 479.066
+offset_right = 489.066
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect28" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 495.466
+offset_right = 505.466
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect29" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 512.784
+offset_right = 522.784
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect30" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 529.184
+offset_right = 539.184
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect31" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 545.051
+offset_right = 555.051
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect32" type="ColorRect" parent="Paralax_set_1"]
+custom_minimum_size = Vector2(10, 0)
+offset_left = 561.451
+offset_right = 571.451
+offset_bottom = 40.0
+size_flags_horizontal = 6
+color = Color(0.294118, 0.639216, 0.580392, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 160.0
+offset_top = 520.0
+offset_right = 768.0
+offset_bottom = 552.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 800.0
+offset_top = 520.0
+offset_right = 1408.0
+offset_bottom = 552.0

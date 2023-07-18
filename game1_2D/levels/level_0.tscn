@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1l0bfb4sdyq7"]
+[gd_scene load_steps=5 format=3 uid="uid://c1l0bfb4sdyq7"]
 
 [ext_resource type="Script" path="res://levels/StartGameButton.gd" id="1_64xlk"]
+[ext_resource type="Script" path="res://levels/level_0.gd" id="1_c6nup"]
 [ext_resource type="Script" path="res://levels/SettingsButton.gd" id="2_cj7aa"]
 [ext_resource type="PackedScene" uid="uid://cjkhvn1d1lrlv" path="res://menus/game_settings.tscn" id="3_mnsla"]
 
 [node name="Level_0" type="Node2D"]
+script = ExtResource("1_c6nup")
 
 [node name="Title" type="Label" parent="."]
 anchors_preset = 8
@@ -58,5 +60,5 @@ position = Vector2(-95.5, -320)
 layout_mode = 2
 text = "QUIT"
 
-[connection signal="pressed" from="HBoxContainer/StartGameButton" to="HBoxContainer/StartGameButton" method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/SettingsButton" to="HBoxContainer/SettingsButton" method="_on_settings_pressed"]
