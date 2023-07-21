@@ -1,12 +1,17 @@
-extends Node2D
+extends CharacterBody2D 
+ 
 
 
-@export var speed = 400
+@export var speed = 40
 var player_moving = false
 
 var player_state
 
-var velocity = Vector2.ZERO
+var to_move = false
+
+#var velocity = Vector2.ZERO
+
+#var velocity = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +25,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	to_move = true
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
@@ -33,6 +39,7 @@ func _process(delta):
 		
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
+		to_move = move_and_collide(velocity * delta)
 		player_state = Constants.PlayerState.walking
 		player_moving = true
 		
@@ -41,7 +48,9 @@ func _process(delta):
 		player_moving = false
 		
 	
-	position += velocity * delta
+	if to_move:
+		position += velocity * delta
+	
 	
 	
 #	match player_state:
