@@ -13,6 +13,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	
+	$PlayerManager.update_player_manager(delta)
+	$LevelManager.update_current_level(delta)
+	
+	
+	
+	
 	$GameStateManager.update_game_state_manager(game_state, delta)
 	
 	# Update based on current game_state

@@ -2,7 +2,6 @@ extends Node
 
 var levels 
 var menus
- 
 
 var current_level_index
 var current_level
@@ -13,21 +12,16 @@ func init_level_manager():
 		preload("res://levels/level_1.tscn")
 	]
 	
-	
-	
 	current_level_index = 0
 	current_level = null
 	
 	start_level(current_level_index)
-	
 
-func update_currentlevel():
-	current_level.update_level()
-
+func update_current_level(delta):
+	current_level.update_level(delta)
 
 
 func start_level(level_index):
-
 	if current_level != null:
 		current_level.queue_free()
 		
@@ -48,5 +42,3 @@ func next_level():
 		start_level(current_level_index + 1)
 	else:
 		print("No more levels!")
-
-

@@ -8,6 +8,12 @@
 [node name="Level_0" type="Node2D"]
 script = ExtResource("1_c6nup")
 
+[node name="PlayerStart" type="Node2D" parent="."]
+position = Vector2(640, 792)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerStart"]
+position = Vector2(-16, -392)
+
 [node name="Title" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -32,9 +38,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 608.0
+offset_left = 496.0
 offset_top = 832.0
-offset_right = 648.0
+offset_right = 761.0
 offset_bottom = 872.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -54,7 +60,7 @@ text = "SETTINGS
 script = ExtResource("2_cj7aa")
 
 [node name="GameSettings" parent="HBoxContainer/SettingsButton" instance=ExtResource("3_mnsla")]
-position = Vector2(-95.5, -320)
+position = Vector2(-88, -320)
 
 [node name="QuitGameButton2" type="Button" parent="HBoxContainer"]
 layout_mode = 2

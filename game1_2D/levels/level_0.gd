@@ -3,13 +3,17 @@ extends Node2D
 
 
 var level_manager
+var player
 
 
 func init_level():
+	player = get_node("../../PlayerManager/Player")
 	level_manager = get_parent()
+	player.visible = false
+	player.position = $PlayerStart.position
 
 
-func update_level():
+func update_level(delta):
 	pass
 
 

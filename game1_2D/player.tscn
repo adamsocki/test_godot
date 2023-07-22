@@ -7,17 +7,14 @@
 size = Vector2(7.8, 27.5)
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(5, 5)
 script = ExtResource("1_olmpa")
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(2, -61.8)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_552pj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0999992, 1.35)
 shape = SubResource("RectangleShape2D_0eb76")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]

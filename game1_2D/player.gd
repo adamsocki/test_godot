@@ -2,7 +2,7 @@ extends CharacterBody2D
  
 
 
-@export var speed = 40
+@export var speed = 140
 var player_moving = false
 
 var player_state
@@ -16,16 +16,10 @@ var to_move = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_state = Constants.PlayerState.idle
-	
-#	position = pos
 
 
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	to_move = true
+func update_player(delta):
+	to_move = false
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
@@ -35,21 +29,29 @@ func _process(delta):
 #		velocity.x -= 1
 #	if Input.is_action_pressed("move_left"):
 #		velocity.x -= 1
-		
-		
+
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		to_move = move_and_collide(velocity * delta)
-		player_state = Constants.PlayerState.walking
-		player_moving = true
-		
+		#to_move = move_and_collide(velocity * delta)
+		var collission = move_and_collide(velocity * delta)
+		to_move = collission == null
+		if to_move:
+			player_moving = true
+			player_state = Constants.PlayerState.walking
+		else:
+			player_moving = false
 	else:
+		to_move = false
 		player_state = Constants.PlayerState.idle
 		player_moving = false
 		
 	
 	if to_move:
 		position += velocity * delta
+
+func _process(delta):
+	pass
 	
 	
 	
@@ -62,4 +64,4 @@ func _process(delta):
 #		Constants.PlayerState.idle:
 #			if !$IdleAnimatedSprite2D.is_playing():
 #				$WalkingAnimatedSprite2D.stop()
-#				$IdleAnimatedSprite2D.play("idle", false, false)
+#				$IdleAnimatedSprite2D.play("idle", false, false
