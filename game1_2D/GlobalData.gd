@@ -8,3 +8,5 @@ class Global_Data:
 				return 0.4
 			_:
 				pass
+				
+				

@@ -33,7 +33,6 @@ func update_player(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		#to_move = move_and_collide(velocity * delta)
 		var collission = move_and_collide(velocity * delta)
 		to_move = collission == null
 		if to_move:
@@ -45,7 +44,6 @@ func update_player(delta):
 		to_move = false
 		player_state = Constants.PlayerState.idle
 		player_moving = false
-		
 	
 	if to_move:
 		position += velocity * delta

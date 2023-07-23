@@ -7,6 +7,8 @@ func _ready():
 	
 	game_state = Constants.GameState.StartGame
 #	functions = Functions.new()
+	$CameraManager.init_camera_manager()
+	$UIManager.init_ui_manager()
 	$GameStateManager.init_game()
 	$LevelManager.init_level_manager()
 
@@ -15,8 +17,12 @@ func _process(delta):
 	
 	
 	$PlayerManager.update_player_manager(delta)
+	$CameraManager.update_camera_manager(delta)
+	
 	$LevelManager.update_current_level(delta)
 	
+	
+	$UIManager.update_ui_manager(delta)
 	
 	
 	

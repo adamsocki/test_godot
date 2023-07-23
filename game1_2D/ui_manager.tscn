@@ -1,8 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3j71gqcavu5m"]
+[gd_scene load_steps=3 format=3 uid="uid://d3j71gqcavu5m"]
 
 [ext_resource type="Script" path="res://ui_manager.gd" id="1_m0iu7"]
+[ext_resource type="Script" path="res://Camera_UI.gd" id="2_rw8hy"]
 
 [node name="UIManager" type="Node"]
 script = ExtResource("1_m0iu7")
 
-[node name="Cursor" type="Node2D" parent="."]
+[node name="Camera_UI" type="Node2D" parent="."]
+script = ExtResource("2_rw8hy")
+
+[node name="Cursor" type="Node2D" parent="Camera_UI"]
+
+[node name="CheckBox" type="CheckBox" parent="Camera_UI"]
+offset_left = -437.0
+offset_top = -538.0
+offset_right = -413.0
+offset_bottom = -514.0
+scale = Vector2(10, 10)
+
+[node name="ItemList" type="ItemList" parent="Camera_UI"]
+offset_left = 1159.0
+offset_top = 48.0
+offset_right = 1219.0
+offset_bottom = 138.0
+item_count = 3
+max_columns = 3
+item_0/text = "test"
+item_1/text = "two"
+item_2/text = "apple"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Camera_UI"]
