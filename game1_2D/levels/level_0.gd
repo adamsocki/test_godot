@@ -7,7 +7,7 @@ var player
 
 
 func init_level():
-	player = get_node("../../PlayerManager/Player")
+	player = get_node("/root/GameManager/PlayerManager/Player")
 	level_manager = get_parent()
 	player.visible = false
 	player.position = $PlayerStart.position

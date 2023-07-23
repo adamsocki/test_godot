@@ -6,7 +6,7 @@ var player
 var functions = Functions.new()
 
 func init_level():
-	player = get_node("../../PlayerManager/Player")
+	player = get_node("/root/GameManager/PlayerManager/Player")
 	player.visible = true
 	player.position = $Start.global_position
 	#$Player_False.queue_free()

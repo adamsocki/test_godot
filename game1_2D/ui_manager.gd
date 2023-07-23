@@ -38,7 +38,7 @@ func init_all_levels():
 	start_game_button.text = "Start"
 	$HBoxContainer.set("theme_override_constants/separation", 100)
 	
-	level_manager = get_node("../LevelManager")
+	level_manager = get_node("/root/GameManager/LevelManager")
 	
 #	start_game_button.pressed.connect(on_button_pressed)
 	

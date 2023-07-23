@@ -4,7 +4,7 @@ var camera
 
 # Called when the node enters the scene tree for the first time.
 func init_camera_ui():
-	camera = get_node("../../CameraManager/Camera")
+	camera = get_node("/root/GameManager/CameraManager/Camera")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

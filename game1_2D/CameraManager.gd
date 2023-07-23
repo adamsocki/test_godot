@@ -5,7 +5,7 @@ extends Node
 var player
 
 func init_camera_manager():
-	player = get_node("../PlayerManager/Player")
+	player = get_node("/root/GameManager/PlayerManager/Player")
 	
 
 
