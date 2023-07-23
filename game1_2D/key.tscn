@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1vds5kpb31vp"]
+[gd_scene load_steps=3 format=3 uid="uid://b1vds5kpb31vp"]
 
 [ext_resource type="Script" path="res://Key.gd" id="1_uvlkr"]
+[ext_resource type="PackedScene" uid="uid://dme8vtl8nje2t" path="res://interact_player.tscn" id="2_iiysg"]
 
 [node name="Key" type="Node2D"]
 script = ExtResource("1_uvlkr")
@@ -9,3 +10,6 @@ script = ExtResource("1_uvlkr")
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.345098, 0.823529, 0.843137, 1)
+
+[node name="InteractPlayer" parent="." instance=ExtResource("2_iiysg")]
+scale = Vector2(2, 1.99704)
