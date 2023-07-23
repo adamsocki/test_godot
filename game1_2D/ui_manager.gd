@@ -21,12 +21,20 @@ var level_manager
 
 func init_ui_manager():
 	$Camera_UI.init_camera_ui()
+	$Camera_UI/InventoryList.visible = false
 
 
 func update_ui_manager(delta):
 	set_cursor_position()
+	view_inventory()
 	$Camera_UI.update_camera_ui(delta)
 	
+	
+
+
+func view_inventory():
+	if Input.is_action_just_pressed("inventory"):
+		$Camera_UI/InventoryList.visible = !$Camera_UI/InventoryList.visible
 
 func init_all_levels():
 	quit_game_button = $HBoxContainer/QuitGameButton

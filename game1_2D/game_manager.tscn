@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://baw0xf0b73idv"]
+[gd_scene load_steps=9 format=3 uid="uid://baw0xf0b73idv"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_g3r8g"]
 [ext_resource type="PackedScene" uid="uid://d3j71gqcavu5m" path="res://ui_manager.tscn" id="1_ibcoc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://LevelManager.gd" id="4_qhfwk"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="5_64fn8"]
 [ext_resource type="PackedScene" uid="uid://b61lnl0uvhop" path="res://player.tscn" id="6_0nryj"]
+[ext_resource type="Script" path="res://InventoryManager.gd" id="6_lykvr"]
 [ext_resource type="Script" path="res://CameraManager.gd" id="7_4wl1d"]
 
 [node name="GameManager" type="Node"]
@@ -20,6 +21,9 @@ script = ExtResource("4_qhfwk")
 script = ExtResource("5_64fn8")
 
 [node name="Player" parent="PlayerManager" instance=ExtResource("6_0nryj")]
+
+[node name="InventoryManager" type="Node" parent="PlayerManager"]
+script = ExtResource("6_lykvr")
 
 [node name="UIManager" parent="." instance=ExtResource("1_ibcoc")]
 

@@ -44,3 +44,10 @@ offset_right = 441.0
 offset_bottom = 310.0
 scale = Vector2(3.77644, 3.77644)
 text = "Press SPACE to open door"
+
+[node name="InventoryList" type="ItemList" parent="Camera_UI"]
+layout_mode = 0
+offset_left = 566.0
+offset_top = 328.0
+offset_right = 606.0
+offset_bottom = 368.0

@@ -17,8 +17,6 @@ var text_box
 var root_node
 
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#root = get_tree().current_scene
@@ -46,7 +44,6 @@ func _on_area_2d_body_entered(body):
 		in_range = true
 		
 		
-
 
 func _on_area_2d_body_exited(body):
 	if door:
