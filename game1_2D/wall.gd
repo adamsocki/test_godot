@@ -3,10 +3,13 @@ extends Node2D
 
 
 @export var door = false
+var text_box
 var root_node
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	text_box = get_node("../../../UIManager/Camera_UI/ActionText")
+	text_box.text = "Press SPACE to Open Door"	
+	text_box.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,10 +20,8 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	root_node = get_node("../../../UIManager/Camera_UI/CheckBox")
-	root_node.show()
+	text_box.visible = true
 
 
 func _on_area_2d_body_exited(body):
-	root_node = get_node("../../../UIManager/Camera_UI/CheckBox")
-	root_node.hide()
+	text_box.visible = false

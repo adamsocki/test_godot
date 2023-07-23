@@ -6,7 +6,11 @@
 [node name="UIManager" type="Node"]
 script = ExtResource("1_m0iu7")
 
-[node name="Camera_UI" type="Node2D" parent="."]
+[node name="Camera_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("2_rw8hy")
 
 [node name="Cursor" type="Node2D" parent="Camera_UI"]
@@ -30,3 +34,15 @@ item_1/text = "two"
 item_2/text = "apple"
 
 [node name="CanvasGroup" type="CanvasGroup" parent="Camera_UI"]
+
+[node name="ActionText" type="Label" parent="Camera_UI"]
+visible = false
+layout_mode = 0
+offset_left = 242.0
+offset_top = 284.0
+offset_right = 441.0
+offset_bottom = 310.0
+scale = Vector2(3.77644, 3.77644)
+text = "Press SPACE to open door"
+
+[node name="Camera_UI_" type="Node2D" parent="."]
