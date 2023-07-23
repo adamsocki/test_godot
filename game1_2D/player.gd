@@ -9,9 +9,29 @@ var player_state
 
 var to_move = false
 
-#var velocity = Vector2.ZERO
 
-#var velocity = Vector2.ZERO
+
+var inventory = {}
+
+
+func pick_up_entity(entity):
+	inventory[entity.id] = entity
+	entity.queue_free()  # Remove the entity from the scene
+
+
+func has_entity(entity_id):
+	return entity_id in inventory
+
+
+func use_entity(entity_id, remove):
+	if has_entity(entity_id):
+		var entity = inventory[entity_id]
+		# Perform the action associated with the entity
+		entity.perform_action()
+		# Remove the entity from the inventory after use if remove
+		if remove:
+			inventory.erase(entity_id)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

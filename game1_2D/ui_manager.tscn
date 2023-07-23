@@ -16,6 +16,7 @@ script = ExtResource("2_rw8hy")
 [node name="Cursor" type="Node2D" parent="Camera_UI"]
 
 [node name="CheckBox" type="CheckBox" parent="Camera_UI"]
+layout_mode = 0
 offset_left = -437.0
 offset_top = -538.0
 offset_right = -413.0
@@ -23,6 +24,7 @@ offset_bottom = -514.0
 scale = Vector2(10, 10)
 
 [node name="ItemList" type="ItemList" parent="Camera_UI"]
+layout_mode = 0
 offset_left = 1159.0
 offset_top = 48.0
 offset_right = 1219.0

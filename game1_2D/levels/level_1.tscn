@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd1x5rds8v7ws"]
+[gd_scene load_steps=5 format=3 uid="uid://dd1x5rds8v7ws"]
 
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_o4g7v"]
 [ext_resource type="PackedScene" uid="uid://cpgpbqlbe10c8" path="res://wall.tscn" id="2_l6414"]
 [ext_resource type="Texture2D" uid="uid://pcmlj6qt40dk" path="res://character/man_idle1.png" id="3_grcw3"]
+[ext_resource type="PackedScene" uid="uid://b1vds5kpb31vp" path="res://key.tscn" id="4_nypv0"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(-96, -64)
@@ -340,3 +341,6 @@ offset_left = 432.0
 offset_top = 424.0
 offset_right = 472.0
 offset_bottom = 464.0
+
+[node name="Key" parent="." instance=ExtResource("4_nypv0")]
+position = Vector2(546, 488)
