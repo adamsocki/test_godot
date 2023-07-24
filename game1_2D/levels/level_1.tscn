@@ -343,4 +343,4 @@ offset_right = 472.0
 offset_bottom = 464.0
 
 [node name="Key" parent="." instance=ExtResource("4_nypv0")]
-position = Vector2(546, 488)
+position = Vector2(546, 456)

@@ -13,3 +13,8 @@ color = Color(0.345098, 0.823529, 0.843137, 1)
 
 [node name="InteractPlayer" parent="." instance=ExtResource("2_iiysg")]
 scale = Vector2(2, 1.99704)
+
+[connection signal="area_entered" from="InteractPlayer" to="." method="_on_interact_player_area_entered"]
+[connection signal="area_exited" from="InteractPlayer" to="." method="_on_interact_player_area_exited"]
+[connection signal="body_entered" from="InteractPlayer" to="." method="_on_interact_player_body_entered"]
+[connection signal="body_exited" from="InteractPlayer" to="." method="_on_interact_player_body_exited"]
