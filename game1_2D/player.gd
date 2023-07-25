@@ -14,9 +14,7 @@ var to_move = false
 var inventory = {}
 
 
-func pick_up_entity(entity):
-	inventory[entity.id] = entity
-	entity.queue_free()  # Remove the entity from the scene
+
 
 
 func has_entity(entity_id):

@@ -32,3 +32,8 @@ enum PlayerState
 	idle,
 	walking
 }
+
+enum EntityType
+{
+	TERRAIN, PLAYER, TEST, FERN, WALL, POST, KEY, EntityType_Count
+}
