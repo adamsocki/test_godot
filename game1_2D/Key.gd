@@ -6,7 +6,7 @@ var UI_Manager
 
 var pickup_label
 
-var key_code: String
+@export var key_code: String
 
 
 func _ready():
@@ -24,6 +24,7 @@ func _ready():
 func _on_interact_player_body_entered(body):
 	pickup_label.visible = true
 	body.get_node("InventoryManager").can_pickup_entity = true
+	body.current_over_entity = self
 
 
 func _on_interact_player_body_exited(body):

@@ -19,5 +19,5 @@ texture = ExtResource("2_552pj")
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_0eb76")
 
-[node name="InventoryManager" type="Node" parent="."]
+[node name="InventoryManager" type="Node2D" parent="."]
 script = ExtResource("3_icee5")

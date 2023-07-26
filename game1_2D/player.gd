@@ -9,7 +9,7 @@ var player_state
 
 var to_move = false
 
-
+var current_over_entity
 
 var inventory = {}
 
@@ -47,6 +47,15 @@ func update_player(delta):
 #		velocity.x -= 1
 #	if Input.is_action_pressed("move_left"):
 #		velocity.x -= 1
+
+
+	if Input.is_action_just_pressed("pick_up"):
+		if $InventoryManager.can_pickup_entity:
+			print("can")
+			if (current_over_entity != null):
+				print("notNull")
+				$InventoryManager.add_to_inventory(current_over_entity)
+				current_over_entity = null
 
 
 	if velocity.length() > 0:
