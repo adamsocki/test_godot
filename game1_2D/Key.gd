@@ -7,6 +7,7 @@ var UI_Manager
 var pickup_label
 
 @export var key_code: String
+@export var entity_name : String
 
 
 func _ready():

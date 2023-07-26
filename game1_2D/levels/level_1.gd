@@ -3,6 +3,7 @@ extends Node2D
 var player
 
 
+
 var functions = Functions.new()
 
 func init_level():

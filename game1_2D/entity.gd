@@ -4,7 +4,7 @@ var is_active = true
 var entity_manager
 
 var entity_id: int
-var entity_name: String
+#@export var entity_name: String
 var entity_type: Constants.EntityType
 
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3j71gqcavu5m"]
+[gd_scene load_steps=4 format=3 uid="uid://d3j71gqcavu5m"]
 
 [ext_resource type="Script" path="res://ui_manager.gd" id="1_m0iu7"]
 [ext_resource type="Script" path="res://Camera_UI.gd" id="2_rw8hy"]
+[ext_resource type="Script" path="res://InventoryList.gd" id="3_ijud2"]
 
 [node name="UIManager" type="Node"]
 script = ExtResource("1_m0iu7")
@@ -53,3 +54,4 @@ offset_left = 566.0
 offset_top = 328.0
 offset_right = 606.0
 offset_bottom = 368.0
+script = ExtResource("3_ijud2")
