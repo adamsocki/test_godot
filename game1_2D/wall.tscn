@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpgpbqlbe10c8"]
 
-[ext_resource type="Script" path="res://wall.gd" id="1_2x1r5"]
+[ext_resource type="Script" path="res://door.gd" id="1_njyls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5els"]
 size = Vector2(40, 40)
@@ -9,7 +9,7 @@ size = Vector2(40, 40)
 
 [node name="Wall" type="StaticBody2D"]
 collision_layer = 2
-script = ExtResource("1_2x1r5")
+script = ExtResource("1_njyls")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, 20)

@@ -10,4 +10,9 @@ func init_player():
 func update_player_manager(delta):
 	$Player.update_player(delta)
 	
+	# player switcher
+	if Input.is_action_pressed("player_switch"):
+		pass
+
+
 
