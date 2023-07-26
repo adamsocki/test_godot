@@ -12,6 +12,7 @@ script = ExtResource("1_o4g7v")
 [node name="Wall" parent="." instance=ExtResource("2_l6414")]
 position = Vector2(688, 416)
 door = true
+key_code = "000"
 
 [node name="Paralax_set_1" type="Node2D" parent="."]
 scale = Vector2(4.03347, 7.44032)
@@ -344,6 +345,6 @@ offset_bottom = 464.0
 
 [node name="Key" parent="." instance=ExtResource("4_nypv0")]
 position = Vector2(546, 424)
-key_code = "key"
+key_code = "000"
 entity_name = "key"
 door_access = NodePath("../Wall")

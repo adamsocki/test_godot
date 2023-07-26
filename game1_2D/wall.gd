@@ -18,6 +18,10 @@ var root_node
 var body_node
 var try_to_open
 @export var space_to_trigger = true
+@export var door_closed = true
+@export var key_code : String
+var door_open_animation
+var door_open_delta
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,17 +30,28 @@ func _ready():
 	text_box = get_node("/root/GameManager/UIManager/Camera_UI/ActionText")
 
 	
-	
+	door_open_animation = false
 	text_box.visible = false
 	in_range = false
 	try_to_open = false
+	door_open_delta = 0
 #	player = get_node("../../")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	if door_open_animation:
+		open_door(delta)
+		
+func open_door(delta):
+	var move_door = 100 * delta 
+	self.position.y -= move_door
+	
+	door_open_delta += abs(move_door)
+	
+	if door_open_delta > 100:
+		door_open_animation = false
+		door_open_delta = 0 # maybe not do this
 
 func _on_area_2d_body_entered(body):
 	if door:
@@ -63,5 +78,8 @@ func trigger_entity_by_player():
 	if in_range:
 		var list = body_node.get_node("InventoryManager").current_inventory
 		for item in list:
-			print(item) 
-			print(self)
+			print(item.key_code) 
+			print(key_code)
+			if (item.key_code == key_code):
+				door_closed = false
+				door_open_animation = true
