@@ -568,6 +568,7 @@ position = Vector2(336, 440)
 disable_mode = 1
 
 [node name="Start" type="Node2D" parent="."]
+visible = false
 position = Vector2(176, 443)
 scale = Vector2(5, 5)
 

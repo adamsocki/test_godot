@@ -11,6 +11,7 @@ func _ready():
 	$UIManager.init_ui_manager()
 	$GameStateManager.init_game()
 	$LevelManager.init_level_manager()
+	$PlayerManager.init_player_manager()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

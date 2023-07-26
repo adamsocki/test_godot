@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3go50t3wtlca"]
+
+[ext_resource type="Script" path="res://EntityManager.gd" id="1_bxso1"]
+
+[node name="EntityManager" type="Node"]
+script = ExtResource("1_bxso1")
+
+[node name="GameEntities" type="Node" parent="."]

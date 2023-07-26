@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://PlayerManager.gd" id="5_64fn8"]
 [ext_resource type="PackedScene" uid="uid://b61lnl0uvhop" path="res://player.tscn" id="6_0nryj"]
 [ext_resource type="Script" path="res://CameraManager.gd" id="7_4wl1d"]
-[ext_resource type="Script" path="res://EntityManager.gd" id="9_wp1wx"]
+[ext_resource type="PackedScene" uid="uid://b3go50t3wtlca" path="res://entity_manager.tscn" id="8_rjjtq"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_g3r8g")
@@ -29,5 +29,4 @@ script = ExtResource("7_4wl1d")
 
 [node name="Camera" type="Camera2D" parent="CameraManager"]
 
-[node name="EntityManager" type="Node" parent="."]
-script = ExtResource("9_wp1wx")
+[node name="EntityManager" parent="." instance=ExtResource("8_rjjtq")]
