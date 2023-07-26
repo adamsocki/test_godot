@@ -57,6 +57,13 @@ func update_player(delta):
 				$InventoryManager.add_to_inventory(current_over_entity)
 				current_over_entity = null
 
+	if Input.is_action_just_pressed("space_bar"):
+		print(1)
+		if (current_over_entity != null && current_over_entity.space_to_trigger):
+			print(2)
+#			current_over_entity.try_to_open = true
+			current_over_entity.trigger_entity_by_player()
+#			current_over_entity.try_to_open = true			
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed

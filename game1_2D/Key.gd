@@ -9,6 +9,8 @@ var pickup_label
 @export var key_code: String
 @export var entity_name : String
 
+@export var door_access : NodePath
+
 
 func _ready():
 	pickup_label = Label.new()
@@ -31,3 +33,5 @@ func _on_interact_player_body_entered(body):
 func _on_interact_player_body_exited(body):
 	pickup_label.visible = false
 	body.get_node("InventoryManager").can_pickup_entity = false
+	body.current_over_entity = null
+	

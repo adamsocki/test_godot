@@ -8,6 +8,9 @@ var entity_id: int
 var entity_type: Constants.EntityType
 
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
