@@ -14,7 +14,7 @@ var current_over_entity
 var inventory = {}
 
 
-
+var portal_type : Constants.PortalType
 
 
 func has_entity(entity_id):
@@ -56,6 +56,11 @@ func update_player(delta):
 				print("notNull")
 				$InventoryManager.add_to_inventory(current_over_entity)
 				current_over_entity = null
+				
+	if Input.is_action_pressed("move_down"):
+		if portal_type != null:
+			pass
+			#velocity.y -1 = 
 
 	if Input.is_action_just_pressed("space_bar"):
 		print(1)

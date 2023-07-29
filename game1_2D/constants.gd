@@ -37,3 +37,9 @@ enum EntityType
 {
 	TERRAIN, PLAYER, TEST, FERN, WALL, POST, KEY, EntityType_Count
 }
+
+
+enum PortalType
+{
+	DOWN, SUBWAY_DOOR
+}

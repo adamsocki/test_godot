@@ -12,5 +12,7 @@ offset_bottom = 192.0
 color = Color(0.584314, 0, 0.243137, 1)
 
 [node name="InteractPlayer" parent="." instance=ExtResource("1_deswv")]
-position = Vector2(-4.76837e-07, 0)
 scale = Vector2(6.36, 9.55704)
+
+[connection signal="body_entered" from="InteractPlayer" to="." method="_on_interact_player_body_entered"]
+[connection signal="body_exited" from="InteractPlayer" to="." method="_on_interact_player_body_exited"]
