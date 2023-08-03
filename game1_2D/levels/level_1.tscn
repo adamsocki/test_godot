@@ -533,10 +533,10 @@ size_flags_horizontal = 6
 color = Color(0.294118, 0.639216, 0.580392, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 160.0
-offset_top = 520.0
-offset_right = 768.0
-offset_bottom = 552.0
+offset_left = 139.0
+offset_top = 656.0
+offset_right = 747.0
+offset_bottom = 688.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 800.0
@@ -590,7 +590,7 @@ disable_mode = 1
 
 [node name="Start" type="Node2D" parent="."]
 visible = false
-position = Vector2(176, 443)
+position = Vector2(200, 360)
 scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Start"]
@@ -631,12 +631,15 @@ door_access = NodePath("../Door")
 [node name="Portal" parent="." instance=ExtResource("5_q3kg6")]
 position = Vector2(128, -48)
 portal_label = "Hold Down to Go Down"
-portal_angle = 45.0
 portal_end = 0
 
 [node name="Portal" parent="Portal" instance=ExtResource("5_q3kg6")]
-position = Vector2(418, 224)
+position = Vector2(264, -304)
 portal_end = 1
 
 [node name="Train" parent="." instance=ExtResource("6_mdkb2")]
 position = Vector2(2584, 776)
+
+[node name="floor" parent="." instance=ExtResource("2_l6414")]
+position = Vector2(168, 532)
+scale = Vector2(15.64, 1)

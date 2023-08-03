@@ -37,3 +37,10 @@ offset_top = -82.0
 offset_right = 67.0
 offset_bottom = -56.0
 text = "afaewfaef"
+
+[node name="down_pressed" type="Label" parent="Debug"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "down"

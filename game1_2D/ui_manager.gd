@@ -84,10 +84,6 @@ func update_ui_start(delta):
 			transition_ui_fade(delta)
 
 
-
-
-
-
 func set_cursor_position():
 	pass
 	#$Cursor.position = get_viewport().get_mouse_position()
