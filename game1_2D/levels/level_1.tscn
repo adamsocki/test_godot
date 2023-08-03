@@ -14,6 +14,7 @@ script = ExtResource("1_o4g7v")
 [node name="Door" parent="." instance=ExtResource("2_l6414")]
 position = Vector2(688, 416)
 door = true
+entity_name = "Door"
 key_code = "000"
 
 [node name="Paralax_set_1" type="Node2D" parent="."]
@@ -628,7 +629,14 @@ entity_name = "key"
 door_access = NodePath("../Door")
 
 [node name="Portal" parent="." instance=ExtResource("5_q3kg6")]
-position = Vector2(985, 328)
+position = Vector2(128, -48)
+portal_label = "Hold Down to Go Down"
+portal_angle = 45.0
+portal_end = 0
+
+[node name="Portal" parent="Portal" instance=ExtResource("5_q3kg6")]
+position = Vector2(418, 224)
+portal_end = 1
 
 [node name="Train" parent="." instance=ExtResource("6_mdkb2")]
 position = Vector2(2584, 776)

@@ -12,6 +12,7 @@ extends "res://Entity.gd"
 var player
 var in_range
 
+@export var entity_name : String
 
 var text_box
 var root_node

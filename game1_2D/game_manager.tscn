@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://baw0xf0b73idv"]
+[gd_scene load_steps=10 format=3 uid="uid://baw0xf0b73idv"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_g3r8g"]
 [ext_resource type="PackedScene" uid="uid://d3j71gqcavu5m" path="res://ui_manager.tscn" id="1_ibcoc"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b61lnl0uvhop" path="res://player.tscn" id="6_0nryj"]
 [ext_resource type="Script" path="res://CameraManager.gd" id="7_4wl1d"]
 [ext_resource type="PackedScene" uid="uid://b3go50t3wtlca" path="res://entity_manager.tscn" id="8_rjjtq"]
+[ext_resource type="PackedScene" uid="uid://cncwyarnu3kxt" path="res://debug_manager.tscn" id="9_w10u7"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_g3r8g")
@@ -30,3 +31,6 @@ script = ExtResource("7_4wl1d")
 [node name="Camera" type="Camera2D" parent="CameraManager"]
 
 [node name="EntityManager" parent="." instance=ExtResource("8_rjjtq")]
+
+[node name="DebugManager" parent="." instance=ExtResource("9_w10u7")]
+size_flags_horizontal = 2

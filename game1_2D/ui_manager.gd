@@ -4,21 +4,10 @@ extends Node
 var quit_game_button
 var start_game_button
 var game_title
-
-
-
 var transition_state
-
-
-
-
-
 var menus
-
-
 var fade_in
 var transition_screen_type_1
-
 var level_manager
 
 func init_ui_manager():
@@ -30,8 +19,6 @@ func update_ui_manager(delta):
 	set_cursor_position()
 	view_inventory()
 	$Camera_UI.update_camera_ui(delta)
-	
-	
 
 
 func view_inventory():
@@ -66,7 +53,6 @@ func on_start_button_pressed():
 	fade_in = true
 	transition_screen_type_1.show()
 	get_parent().get_parent().game_state = Constants.GameState.InGame
-	
 
 
 func transition_ui_fade(delta):

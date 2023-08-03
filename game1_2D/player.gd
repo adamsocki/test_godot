@@ -13,6 +13,8 @@ var current_over_entity
 
 var inventory = {}
 
+var can_move_down = false
+var can_move_up = false
 
 var portal_type : Constants.PortalType
 
@@ -34,21 +36,40 @@ func use_entity(entity_id, remove):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_state = Constants.PlayerState.idle
+	portal_type = Constants.PortalType.BLANK
 
 
 func update_player(delta):
 	to_move = false
 	velocity = Vector2.ZERO
+	
+	# HORIZONTAL (with VERTICAL) Movement Controller
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
+		if (can_move_down):
+			pass
+		if (can_move_up):
+			pass
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
-#	if Input.is_action_pressed("move_left"):
-#		velocity.x -= 1
-#	if Input.is_action_pressed("move_left"):
-#		velocity.x -= 1
+		if (can_move_down):
+			pass
+		if (can_move_up):
+			pass
 
+	
+	# Down Movement Trigger
+	if (Input.is_action_pressed("move_down")):
+		can_move_down = true
+	if (Input.is_action_just_released("move_down")):
+		can_move_down = false
+	# Up Movement Trigger
+	if (Input.is_action_pressed("move_up")):
+		can_move_up = true
+	if (Input.is_action_just_released("move_up")):
+		can_move_up = false
 
+	
 	if Input.is_action_just_pressed("pick_up"):
 		if $InventoryManager.can_pickup_entity:
 			print("can")

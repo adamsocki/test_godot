@@ -38,8 +38,18 @@ enum EntityType
 	TERRAIN, PLAYER, TEST, FERN, WALL, POST, KEY, EntityType_Count
 }
 
+enum ButtonType
+{
+	Entity_Name,
+	Portal_Name
+}
+
+enum PortalSide
+{
+	SIDE_A, SIDE_B, NONE
+}
 
 enum PortalType
 {
-	DOWN, SUBWAY_DOOR
+	DOWN, SUBWAY_DOOR , BLANK
 }
