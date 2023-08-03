@@ -22,7 +22,7 @@ func _ready():
 		var a2 = portal_other_side.position.x * portal_other_side.position.x
 		var b2 = portal_other_side.position.y * portal_other_side.position.y
 		var h = sqrt(a2 + b2)
-		$Floor.set_scale(Vector2(h , floor_thickness))
+		$Floor.set_scale(Vector2(h * 0.125, floor_thickness * 0.125))
 		
 		#calc angle
 		portal_angle = atan2(portal_other_side.position.y, portal_other_side.position.x)
@@ -50,8 +50,10 @@ func _process(delta):
 
 
 func _on_interact_player_body_entered(body):
-	body.portal_type = portal_type
+	if body.get_collision_layer() == 1:
+		body.portal_type = portal_type
 
 
 func _on_interact_player_body_exited(body):
-	body.portal_type = Constants.PortalType.BLANK
+	if body.get_collision_layer() == 1:
+		body.portal_type = Constants.PortalType.BLANK
