@@ -53,3 +53,9 @@ enum PortalType
 {
 	DOWN, SUBWAY_DOOR , BLANK
 }
+
+
+enum UpOrDown
+{
+	UP, DOWN
+}

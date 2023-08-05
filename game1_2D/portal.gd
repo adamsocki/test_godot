@@ -6,12 +6,19 @@ extends "res://Entity.gd"
 @export var portal_label : String
 @export var portal_ender_vector : Vector2
 
+var player_in_portal_trigger = false
+
 var portal_angle : float
 @export var floor_thickness : float
 
 @export var portal_end : Constants.PortalSide
 
 var portal_other_side
+
+var body_in_portal_ref
+
+@export var up_or_down : Constants.UpOrDown
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,9 +35,9 @@ func _ready():
 		portal_angle = atan2(portal_other_side.position.y, portal_other_side.position.x)
 		$Floor.rotate(portal_angle)
 		portal_other_side.portal_angle = portal_angle
-		$Floor.position.y += 192 + floor_thickness
+		$Floor.position.y += 192 
 		$Floor.position.x +=  floor_thickness / 2
-		
+
 
 	elif (portal_end == Constants.PortalSide.SIDE_B):
 		portal_other_side = self.get_parent()
@@ -46,14 +53,44 @@ func get_portal_angle():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if player_in_portal_trigger:
+		if body_in_portal_ref != null:
+			if body_in_portal_ref.can_move_down:
+				print("HI")
+				#$HorizontalGround.collision_mask = 0
+			
+			
+		
 
 
 func _on_interact_player_body_entered(body):
 	if body.get_collision_layer() == 1:
 		body.portal_type = portal_type
+		
 
 
 func _on_interact_player_body_exited(body):
 	if body.get_collision_layer() == 1:
 		body.portal_type = Constants.PortalType.BLANK
+
+
+
+
+
+func _on_UpDownTrigger_player_body_entered(body):
+	if body.get_collision_layer() == 1:
+		player_in_portal_trigger = true
+		body_in_portal_ref = body
+#		if body.can_move_down:
+#			$HorizontalGround.visible = false
+			
+
+
+func _on_UpDownTrigger_player_body_exited(body):
+	if body.get_collision_layer() == 1:
+		body_in_portal_ref = null
+#		if body.can_move_down:
+#			$HorizontalGround.visible = false
+#		else:
+#			$HorizontalGround.visible = true
+
