@@ -59,3 +59,8 @@ enum UpOrDown
 {
 	UP, DOWN
 }
+
+enum GroundType
+{
+	FLOOR, STAIRS
+}

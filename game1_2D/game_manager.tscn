@@ -22,6 +22,7 @@ script = ExtResource("4_qhfwk")
 script = ExtResource("5_64fn8")
 
 [node name="Player" parent="PlayerManager" instance=ExtResource("6_0nryj")]
+visible = false
 
 [node name="UIManager" parent="." instance=ExtResource("1_ibcoc")]
 

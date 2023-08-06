@@ -1,15 +1,18 @@
 extends StaticBody2D
 
 
+var is_on_ground = false
+@export var ground_type : Constants.GroundType
 
 
+func _on_area_2d_body_entered(body):
+	if ground_type == Constants.GroundType.STAIRS:
+		is_on_ground = true
+		body.on_stairs = true
+		print("stairs")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_area_2d_body_exited(body):
+	if ground_type == Constants.GroundType.STAIRS:
+		is_on_ground = false
+		body.on_stairs = false

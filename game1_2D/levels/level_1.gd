@@ -10,6 +10,7 @@ func init_level():
 	player.visible = true
 	player.position = $Start.global_position
 	#$Player_False.queue_free()
+	player.gravity = 4000
 
 
 

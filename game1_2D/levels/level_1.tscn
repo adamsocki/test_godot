@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd1x5rds8v7ws"]
+[gd_scene load_steps=8 format=3 uid="uid://dd1x5rds8v7ws"]
 
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_o4g7v"]
 [ext_resource type="PackedScene" uid="uid://cpgpbqlbe10c8" path="res://wall.tscn" id="2_l6414"]
@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b1vds5kpb31vp" path="res://key.tscn" id="4_nypv0"]
 [ext_resource type="PackedScene" uid="uid://1c481kjv62k7" path="res://portal.tscn" id="5_q3kg6"]
 [ext_resource type="PackedScene" uid="uid://w3wlyuwantv0" path="res://train.tscn" id="6_mdkb2"]
+[ext_resource type="PackedScene" uid="uid://6obukx56sac1" path="res://ground.tscn" id="7_p0bfa"]
 
 [node name="Level1" type="Node2D"]
-position = Vector2(-96, -64)
+position = Vector2(676, -448)
 script = ExtResource("1_o4g7v")
+metadata/_edit_horizontal_guides_ = []
 
 [node name="Door" parent="." instance=ExtResource("2_l6414")]
 position = Vector2(688, 416)
@@ -532,12 +534,6 @@ offset_bottom = 40.0
 size_flags_horizontal = 6
 color = Color(0.294118, 0.639216, 0.580392, 1)
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 139.0
-offset_top = 656.0
-offset_right = 747.0
-offset_bottom = 688.0
-
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 800.0
 offset_top = 520.0
@@ -583,8 +579,7 @@ position = Vector2(336, 440)
 disable_mode = 1
 
 [node name="Start" type="Node2D" parent="."]
-visible = false
-position = Vector2(200, 360)
+position = Vector2(200, 464)
 scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Start"]
@@ -623,7 +618,8 @@ entity_name = "key"
 door_access = NodePath("../Door")
 
 [node name="Portal" parent="." instance=ExtResource("5_q3kg6")]
-position = Vector2(400, 344)
+position = Vector2(-196, -1183)
+scale = Vector2(0.981853, 1.02141)
 portal_label = "Hold Down to Go Down"
 portal_end = 0
 up_or_down = 1
@@ -636,9 +632,49 @@ portal_end = 1
 position = Vector2(2584, 776)
 
 [node name="floor" parent="." instance=ExtResource("2_l6414")]
+visible = false
 position = Vector2(168, 536)
 scale = Vector2(5.794, 0.757045)
 
 [node name="floor2" parent="." instance=ExtResource("2_l6414")]
 position = Vector2(608, 952)
 scale = Vector2(8.95576, 0.658146)
+
+[node name="ground" parent="." instance=ExtResource("7_p0bfa")]
+position = Vector2(64, 540)
+scale = Vector2(43.96, 1)
+ground_type = 0
+
+[node name="ground2" parent="." instance=ExtResource("7_p0bfa")]
+position = Vector2(-216, 464)
+rotation = 0.261799
+scale = Vector2(43.96, 1)
+ground_type = 0
+
+[node name="ground3" parent="." instance=ExtResource("7_p0bfa")]
+position = Vector2(416, 540)
+rotation = 0.654134
+scale = Vector2(44.0412, 1.00185)
+ground_type = 0
+
+[node name="ground4" parent="." instance=ExtResource("7_p0bfa")]
+position = Vector2(664, 730)
+rotation = 0.654134
+scale = Vector2(43.96, 1)
+ground_type = 0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-4, 554)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D/StaticBody2D"]
+position = Vector2(0, -8)
+polygon = PackedVector2Array(0, 0, 88, 0, 160, 0, 160, 0, 160, 32, 0, 32)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(0, -44.2)
+scale = Vector2(1, 2.0625)
+polygon = PackedVector2Array(0, 0, 88, 0, 160, 0, 160, 0, 160, 32, 0, 32)
