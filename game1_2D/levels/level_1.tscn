@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dd1x5rds8v7ws"]
+[gd_scene load_steps=9 format=3 uid="uid://dd1x5rds8v7ws"]
 
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_o4g7v"]
 [ext_resource type="PackedScene" uid="uid://cpgpbqlbe10c8" path="res://wall.tscn" id="2_l6414"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://1c481kjv62k7" path="res://portal.tscn" id="5_q3kg6"]
 [ext_resource type="PackedScene" uid="uid://w3wlyuwantv0" path="res://train.tscn" id="6_mdkb2"]
 [ext_resource type="PackedScene" uid="uid://6obukx56sac1" path="res://ground.tscn" id="7_p0bfa"]
+[ext_resource type="Texture2D" uid="uid://bhcegx8gptopi" path="res://icon.svg" id="8_6mglj"]
 
 [node name="Level1" type="Node2D"]
 position = Vector2(676, -448)
@@ -579,7 +580,7 @@ position = Vector2(336, 440)
 disable_mode = 1
 
 [node name="Start" type="Node2D" parent="."]
-position = Vector2(200, 464)
+position = Vector2(172, 1456)
 scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Start"]
@@ -642,17 +643,18 @@ scale = Vector2(8.95576, 0.658146)
 
 [node name="ground" parent="." instance=ExtResource("7_p0bfa")]
 position = Vector2(64, 540)
-scale = Vector2(43.96, 1)
+scale = Vector2(43.4281, 1.08067)
 ground_type = 0
 
 [node name="ground2" parent="." instance=ExtResource("7_p0bfa")]
 position = Vector2(-216, 464)
 rotation = 0.261799
 scale = Vector2(43.96, 1)
+collision_layer = 1
 ground_type = 0
 
 [node name="ground3" parent="." instance=ExtResource("7_p0bfa")]
-position = Vector2(416, 540)
+position = Vector2(412, 540)
 rotation = 0.654134
 scale = Vector2(44.0412, 1.00185)
 ground_type = 0
@@ -678,3 +680,55 @@ polygon = PackedVector2Array(0, 0, 88, 0, 160, 0, 160, 0, 160, 32, 0, 32)
 position = Vector2(0, -44.2)
 scale = Vector2(1, 2.0625)
 polygon = PackedVector2Array(0, 0, 88, 0, 160, 0, 160, 0, 160, 32, 0, 32)
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Area2D2"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D2"]
+position = Vector2(1296, 1640)
+scale = Vector2(13.4101, 0.370089)
+texture = ExtResource("8_6mglj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D2"]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2/StaticBody2D"]
+polygon = PackedVector2Array(-372, 1616, 2220, 1616, 2220, 1664, -372, 1664)
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(12, 448)
+collision_layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Area2D4"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D3" type="Sprite2D" parent="Area2D4"]
+position = Vector2(1284, 1408)
+rotation = 0.699583
+scale = Vector2(13.4101, 0.370089)
+texture = ExtResource("8_6mglj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D4"]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D4/StaticBody2D"]
+polygon = PackedVector2Array(-372, 1616, 2220, 1616, 2220, 1664, -372, 1664)
+
+[node name="Area2D3" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D3"]
+position = Vector2(1296, 2088)
+scale = Vector2(13.4101, 0.370089)
+texture = ExtResource("8_6mglj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D3"]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3/StaticBody2D"]
+polygon = PackedVector2Array(1052, 1616, 1628, 2112, 1564, 2112, 988, 1616)
